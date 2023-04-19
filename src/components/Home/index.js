@@ -37,7 +37,6 @@ class Home extends Component {
     homeVideos: [],
     searchInput: '',
     apiStatus: apiStatusConstants.initial,
-    bannerDisplay: 'flex',
   }
 
   componentDidMount() {
@@ -75,10 +74,6 @@ class Home extends Component {
     } else {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
-  }
-
-  onCloseBanner = () => {
-    this.setState({bannerDisplay: 'none'})
   }
 
   onChangeInput = event => {
@@ -122,22 +117,26 @@ class Home extends Component {
   }
 
   render() {
-    const {searchInput, bannerDisplay} = this.state
+    const {searchInput} = this.state
+
     return (
       <ThemeAndVideoContext.Consumer>
         {value => {
-          const {isDarkTheme} = value
+          const {isDarkTheme, showHomeCard, updateHomeHomeBannerView} = value
+
+          const onCloseBanner = () => {
+            updateHomeHomeBannerView()
+          }
 
           const bgColor = isDarkTheme ? '#181818' : '#f9f9f9'
           const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
-          const display = bannerDisplay === 'flex' ? 'flex' : 'none'
 
           return (
             <>
               <Header />
               <NavigationBar />
               <HomeContainer data-testid="home" bgColor={bgColor}>
-                <BannerContainer data-testid="banner" display={display}>
+                <BannerContainer data-testid="banner" display={showHomeCard}>
                   <BannerLeftPart>
                     <BannerImage
                       src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
@@ -151,7 +150,7 @@ class Home extends Component {
                   <BannerRightPart>
                     <BannerCloseButton
                       data-testid="close"
-                      onClick={this.onCloseBanner}
+                      onClick={onCloseBanner}
                     >
                       <AiOutlineClose size={25} />
                     </BannerCloseButton>

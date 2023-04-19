@@ -41,7 +41,7 @@ const HomeVideos = props => {
               No Search results found
             </NoVideosHeading>
             <NoVideosNote noteColor={noteColor}>
-              Try different keywords or remove search filter
+              Try different key words or remove search filter
             </NoVideosNote>
             <RetryButton type="button" onClick={onClickRetry}>
               Retry

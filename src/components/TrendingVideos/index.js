@@ -116,7 +116,7 @@ class TrendingVideos extends Component {
           const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
 
           return (
-            <div data-testid="trending">
+            <div>
               <Header />
               <NavigationBar />
               <TrendingContainer data-testid="trending" bgColor={bgColor}>

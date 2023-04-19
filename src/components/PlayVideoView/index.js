@@ -73,7 +73,7 @@ const PlayVideoView = props => {
                 {videoDetails.publishedAt}
               </PlayVideoStatus>
               <PlaySocialButtonsContainer>
-                <BtnContainer>
+                <BtnContainer color={likeIconColor}>
                   <SocialButton
                     type="button"
                     color={likeIconColor}
@@ -83,7 +83,7 @@ const PlayVideoView = props => {
                     <ButtonText>Like</ButtonText>
                   </SocialButton>
                 </BtnContainer>
-                <BtnContainer>
+                <BtnContainer color={dislikeIconColor}>
                   <SocialButton
                     type="button"
                     color={dislikeIconColor}

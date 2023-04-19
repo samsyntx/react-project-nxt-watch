@@ -20,6 +20,11 @@ class App extends Component {
     savedVideos: [],
     isDarkTheme: false,
     activeTab: 'Home',
+    showHomeCard: 'true',
+  }
+
+  updateHomeHomeBannerView = () => {
+    this.setState({showHomeCard: 'false'})
   }
 
   changeTab = tab => {
@@ -52,7 +57,7 @@ class App extends Component {
   }
 
   render() {
-    const {savedVideos, isDarkTheme, activeTab} = this.state
+    const {savedVideos, isDarkTheme, activeTab, showHomeCard} = this.state
     // console.log(savedVideos)
     return (
       <ThemeAndVideoContext.Provider
@@ -60,6 +65,8 @@ class App extends Component {
           savedVideos,
           isDarkTheme,
           activeTab,
+          showHomeCard,
+          updateHomeHomeBannerView: this.updateHomeHomeBannerView,
           toggleTheme: this.toggleTheme,
           addVideo: this.addVideo,
           changeTab: this.changeTab,
@@ -77,7 +84,7 @@ class App extends Component {
           <ProtectedRoute exact path="/gaming" component={GamingVideos} />
           <ProtectedRoute exact path="/saved-videos" component={SavedVideos} />
           <Route path="/not-found" component={NotFound} />
-          <Redirect to="not-found" />
+          <Redirect to="/not-found" />
         </Switch>
       </ThemeAndVideoContext.Provider>
     )

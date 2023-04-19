@@ -16,7 +16,7 @@ export const BannerContainer = styled.div`
   width: 100%;
   background-size: cover;
   height: 200px;
-  display: ${props => props.display};
+  display: ${props => (props.display === 'true' ? 'flex' : 'none')};
   justify-content: space-between;
   padding: 20px;
 `
