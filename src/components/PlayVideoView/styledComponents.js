@@ -42,12 +42,7 @@ export const SocialButton = styled.button`
   margin-right: 10px;
   color: ${props => props.color};
 `
-export const ButtonText = styled.span`
-  margin-left: 5px;
-  @media screen and (max-width: 576px) {
-    display: none;
-  }
-`
+
 export const HrLine = styled.hr`
   border: 1px solid #909090;
 `

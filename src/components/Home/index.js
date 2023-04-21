@@ -143,7 +143,7 @@ class Home extends Component {
                       alt="nxt watch logo"
                     />
                     <BannerText>
-                      Buy Nxt Watch Premium prepaid plans with <br /> UPI
+                      Buy Nxt Watch Premium prepaid plans with UPI
                     </BannerText>
                     <BannerButton type="button">GET IT NOW</BannerButton>
                   </BannerLeftPart>
@@ -151,6 +151,7 @@ class Home extends Component {
                     <BannerCloseButton
                       data-testid="close"
                       onClick={onCloseBanner}
+                      type="button"
                     >
                       <AiOutlineClose size={25} />
                     </BannerCloseButton>
@@ -167,6 +168,7 @@ class Home extends Component {
                   <SearchIconContainer
                     data-testid="searchButton"
                     onClick={this.getSearchResults}
+                    type="button"
                   >
                     <AiOutlineSearch size={20} />
                   </SearchIconContainer>
