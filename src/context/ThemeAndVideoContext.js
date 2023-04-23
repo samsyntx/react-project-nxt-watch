@@ -4,7 +4,7 @@ const ThemeAndVideoContext = React.createContext({
   isDarkTheme: false,
   savedVideos: [],
   activeTab: 'Home',
-  showHomeCard: 'true',
+  showHomeCard: true,
   updateHomeHomeBannerView: () => {},
   toggleTheme: () => {},
   changeTab: () => {},

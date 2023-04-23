@@ -87,7 +87,7 @@ class VideoDetailView extends Component {
 
   renderLoadingView = () => (
     <LoaderContainer data-testid="loader">
-      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+      <Loader type="TailSpin" color="#ff0000" height="50" width="50" />
     </LoaderContainer>
   )
 

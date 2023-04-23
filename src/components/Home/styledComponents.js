@@ -16,17 +16,15 @@ export const BannerContainer = styled.div`
   width: 100%;
   background-size: cover;
   height: 200px;
-  display: ${props => (props.display === 'true' ? 'flex' : 'none')};
+  display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
 `
 export const BannerLeftPart = styled.div`
   width: 50%;
 `
-export const BannerRightPart = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`
+export const BannerRightPart = styled.div``
 
 export const BannerImage = styled.img`
   width: 80px;
@@ -53,6 +51,7 @@ export const BannerCloseButton = styled.button`
   border: none;
   background: none;
   height: 25px;
+  height: 100%;
 `
 
 export const SearchContainer = styled.div`

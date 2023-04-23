@@ -20,11 +20,11 @@ class App extends Component {
     savedVideos: [],
     isDarkTheme: false,
     activeTab: 'Home',
-    showHomeCard: 'true',
+    showHomeCard: true,
   }
 
   updateHomeHomeBannerView = () => {
-    this.setState({showHomeCard: 'false'})
+    this.setState({showHomeCard: false})
   }
 
   changeTab = tab => {
