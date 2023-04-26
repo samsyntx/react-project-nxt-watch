@@ -76,7 +76,7 @@ class LoginForm extends Component {
           value={username}
           name="username"
           onChange={this.onChangeHandler}
-          placeholder="Username"
+          placeholder="Username: rahul"
         />
       </>
     )
@@ -94,7 +94,7 @@ class LoginForm extends Component {
           value={password}
           name="password"
           onChange={this.onChangeHandler}
-          placeholder="Password"
+          placeholder="Password: rahul@2021"
         />
         <CheckboxContainer>
           <Checkbox
